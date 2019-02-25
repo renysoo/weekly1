@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bias" representedClassName="Bias" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="bias" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <entity name="Group" representedClassName="Group" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bias" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bias" inverseName="group1" inverseEntity="Bias" syncable="YES"/>
+        <relationship name="song" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="group" inverseEntity="Song" syncable="YES"/>
+    </entity>
+    <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="song" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bias" positionX="-9" positionY="36" width="128" height="75"/>
+        <element name="Group" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Song" positionX="-36" positionY="9" width="128" height="75"/>
+    </elements>
+</model>
